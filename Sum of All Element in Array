@@ -1,1 +1,16 @@
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        int n = nums.size();  // Fix: Initialize n
+        vector<int> result;   // Fix: Create a result vector
+        int sum = 0; 
+
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];  // Fix: Remove (double) typecast
+            result.push_back(sum);  // Store result instead of printing
+        }
+
+        return result; // Fix: Return the computed vector
+    }
+};
 
